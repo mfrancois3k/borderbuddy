@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Buddy - Customs Broker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <style>
+        /* Mobile-first responsive styles */
+        .container {
+            padding: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        #Layer_1 {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+        }
+
+        /* Hero section */
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        .btn {
+            width: 100%;
+            margin: 0.5rem 0;
+            padding: 1rem;
+        }
+
+        /* About section */
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .image-wrapper img {
+            /* width: 100%; */
+            height: auto;
+        }
+
+        /* Contact form */
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            margin: 0.5rem 0;
+        }
+
+        /* Media queries for larger screens */
+        @media (min-width: 768px) {
+            .button-group {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .btn {
+                width: auto;
+                min-width: 200px;
+            }
+
+            .content-wrapper {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .text-content,
+            .image-wrapper {
+                flex: 1;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .text-lg {
+                font-size: 1rem;
+            }
+
+            .text-3xl {
+                font-size: 1.5rem;
+            }
+
+            .text-2xl {
+                font-size: 1.25rem;
+            }
+
+            .mb-8 {
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background loading">
+    <!-- Loader -->
+    <div class="loader-wrapper">
+        <div class="loader">
+            <div class="loader-text">
+                <span class="letter">B</span>
+                <span class="letter">O</span>
+                <span class="letter">R</span>
+                <span class="letter">D</span>
+                <span class="letter">E</span>
+                <span class="letter">R</span>
+                <span class="letter space">&nbsp;</span>
+                <span class="letter">B</span>
+                <span class="letter">U</span>
+                <span class="letter">D</span>
+                <span class="letter">D</span>
+                <span class="letter">Y</span>
+            </div>
+            <div class="loader-line"></div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="container">
+            
+            <header class="text-center info mb-8">
+                <div class="row">
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 184 32.81"><defs><clipPath id="clip-path" transform="translate(-229.89 -220.71)"><rect x="230.89" y="221.51" width="183" height="32" fill="none"/></clipPath><mask id="mask" x="107.67" y="10.25" width="16.14" height="15.71" maskUnits="userSpaceOnUse"><g transform="translate(-229.89 -220.71)"><g id="mask0_4141_1364" data-name="mask0 4141 1364">
+                        <path d="M353.7,231H337.56v15.71H353.7Z" fill="#fff"/></g></g></mask><mask id="mask-2" x="163.79" y="9.87" width="20.27" height="22.94" maskUnits="userSpaceOnUse">
+                            <g transform="translate(-229.89 -220.71)"><g id="mask1_4141_1364" data-name="mask1 4141 1364">
+                                <path d="M414,230.58H393.68v22.94H414Z" fill="#fff"/></g></g></mask><mask id="mask-3" x="0" y="0" width="99.73" height="27.09" maskUnits="userSpaceOnUse"><g transform="translate(-229.89 -220.71)"><g id="path-8-inside-1_4141_1364" data-name="path-8-inside-1 4141 1364">
+                                    <path d="M230.89,221.71h5.38v10.9a5.48,5.48,0,0,1,2.06-1.53,7.3,7.3,0,0,1,2.57-.5,7,7,0,0,1,3.06.63,7.33,7.33,0,0,1,2.38,1.78,9,9,0,0,1,1.57,2.59,8.89,8.89,0,0,1,0,6.21,8.53,8.53,0,0,1-1.57,2.6,7.47,7.47,0,0,1-2.38,1.78,7,7,0,0,1-3.06.63,7.09,7.09,0,0,1-2.57-.51,4.59,4.59,0,0,1-2-1.65h-.06v1.84h-5.38Zm8.57,13.43a3.46,3.46,0,0,0-1.44.25,3.3,3.3,0,0,0-1.06.76,3.89,3.89,0,0,0-.69,1.08,3.3,3.3,0,0,0-.25,1.33,3.52,3.52,0,0,0,.88,2.41,3.36,3.36,0,0,0,2.56.95A3.51,3.51,0,0,0,242,241a3.29,3.29,0,0,0,.87-2.41,2.93,2.93,0,0,0-.25-1.33,2.76,2.76,0,0,0-.69-1.08,3.3,3.3,0,0,0-1.06-.76A4.78,4.78,0,0,0,239.46,235.14Zm19.14-4.69a12.19,12.19,0,0,1,3.45.51,9,9,0,0,1,2.87,1.58,7.86,7.86,0,0,1,2,2.54,7.69,7.69,0,0,1,.75,3.48,7.61,7.61,0,0,1-.75,3.42,7.14,7.14,0,0,1-2,2.54,9,9,0,0,1-2.87,1.58,10.38,10.38,0,0,1-3.45.51,12.18,12.18,0,0,1-3.44-.51,9,9,0,0,1-2.87-1.58,7.86,7.86,0,0,1-2-2.54,8.47,8.47,0,0,1,0-7,7.19,7.19,0,0,1,2-2.53,9,9,0,0,1,2.87-1.59A14.84,14.84,0,0,1,258.6,230.45Zm0,4.69a3.38,3.38,0,0,0-1.43.25,3.46,3.46,0,0,0-1.07.76,4.13,4.13,0,0,0-.69,1.08,3.48,3.48,0,0,0-.25,1.33A3.57,3.57,0,0,0,256,241a3.4,3.4,0,0,0,2.56.95,3.5,3.5,0,0,0,2.57-.95,3.26,3.26,0,0,0,.88-2.41,3.07,3.07,0,0,0-.25-1.33,3,3,0,0,0-.69-1.08,3.46,3.46,0,0,0-1.07-.76A5.42,5.42,0,0,0,258.6,235.14Zm15.71-1.84a5.27,5.27,0,0,1,2.13-2,7.14,7.14,0,0,1,2.94-.57h1.06v4.88a3.87,3.87,0,0,0-1.13-.38,6.73,6.73,0,0,0-1.19-.07,5.24,5.24,0,0,0-1.87.32,3.41,3.41,0,0,0-1.19.89,3.07,3.07,0,0,0-.56,1.39,6.94,6.94,0,0,0-.19,1.71V246h-5V230.77h5ZM293,244.58a4.45,4.45,0,0,1-2.07,1.65,6.29,6.29,0,0,1-2.63.51,6.91,6.91,0,0,1-3.06-.64,7.54,7.54,0,0,1-2.44-1.77,7.87,7.87,0,0,1-1.57-2.6,8.89,8.89,0,0,1,0-6.21,8.53,8.53,0,0,1,1.57-2.6,7.37,7.37,0,0,1,2.37-1.77,6.93,6.93,0,0,1,3.07-.64,7.09,7.09,0,0,1,2.57.51,5.08,5.08,0,0,1,2.12,1.52V221.71h5.38v24.71H293Zm-3.2-9.44a3.38,3.38,0,0,0-1.43.25,3.35,3.35,0,0,0-1.07.76,4.13,4.13,0,0,0-.69,1.08,3.48,3.48,0,0,0-.25,1.33,3.57,3.57,0,0,0,.88,2.41,3.94,3.94,0,0,0,5.13,0,3.26,3.26,0,0,0,.88-2.41,3.07,3.07,0,0,0-.25-1.33,3,3,0,0,0-.69-1.08,3.46,3.46,0,0,0-1.07-.76A5.49,5.49,0,0,0,289.82,235.14Zm26.91,4.37H305.34a3.55,3.55,0,0,0,.81,2.54,3.37,3.37,0,0,0,2.51.88,3.75,3.75,0,0,0,1.5-.31,2.18,2.18,0,0,0,1.06-1.27h5.13a5.26,5.26,0,0,1-1.06,2.47,7.55,7.55,0,0,1-1.82,1.65,7.77,7.77,0,0,1-2.25.95,11.27,11.27,0,0,1-2.5.32,12.17,12.17,0,0,1-3.5-.51,7.81,7.81,0,0,1-2.76-1.59,7.44,7.44,0,0,1-1.81-2.53,9.38,9.38,0,0,1-.06-6.91,8.16,8.16,0,0,1,1.68-2.53,8,8,0,0,1,2.63-1.59,9.47,9.47,0,0,1,3.38-.57,9.92,9.92,0,0,1,3.5.57,6.44,6.44,0,0,1,2.57,1.72,8.18,8.18,0,0,1,1.63,2.66,17.94,17.94,0,0,1,.75,3.55Zm-5.13-3.29a3,3,0,0,0-1.38-2,3.48,3.48,0,0,0-3.69.19,3,3,0,0,0-1.13,1.78Zm14.07-5.45a5.51,5.51,0,0,0-2.12,1.52v-1.52h-5.38V246h5v-7.61a3,3,0,0,1,.25-1.33,2.89,2.89,0,0,1,.69-1.07,3.46,3.46,0,0,1,1.13-.76,3.69,3.69,0,0,1,1.5-.26,3.75,3.75,0,0,1,1.5.26l.37.19v-5.07A9.74,9.74,0,0,0,325.67,230.77Z" fill="#fff" fill-rule="evenodd"/></g></g></mask></defs><g clip-path="url(#clip-path)"><g mask="url(#mask)"><path d="M342.94,231v8.11a8,8,0,0,0,.13,1.33,3.08,3.08,0,0,0,.37,1.08,2.26,2.26,0,0,0,.81.69,3.79,3.79,0,0,0,2.76,0,1.85,1.85,0,0,0,.81-.69,2.88,2.88,0,0,0,.38-1.08,8.41,8.41,0,0,0,.12-1.33V231h5.38v9.18a6.63,6.63,0,0,1-.62,3.11,6,6,0,0,1-1.69,2,6.82,6.82,0,0,1-2.57,1.07,16.06,16.06,0,0,1-6.38,0,6.78,6.78,0,0,1-2.56-1.07,4.76,4.76,0,0,1-1.69-2,6.66,6.66,0,0,1-.63-3.11V231Z" transform="translate(-229.89 -220.71)" fill="#F1A869" fill-rule="evenodd"/></g><path d="M368,244.45A4.42,4.42,0,0,1,366,246.1a6.29,6.29,0,0,1-2.63.51,6.93,6.93,0,0,1-3.07-.64,7.56,7.56,0,0,1-4-4.37,8.89,8.89,0,0,1,0-6.21,8.3,8.3,0,0,1,1.56-2.6,7.3,7.3,0,0,1,2.38-1.77,7.06,7.06,0,0,1,3.07-.63,7.24,7.24,0,0,1,2.56.5,5.26,5.26,0,0,1,2.13,1.52v-10.9h5.38v24.72H368ZM364.84,235a3.46,3.46,0,0,0-1.44.26,3.16,3.16,0,0,0-1.06.76,3.7,3.7,0,0,0-.69,1.07,3.33,3.33,0,0,0-.25,1.33,3.56,3.56,0,0,0,.87,2.41,3.37,3.37,0,0,0,2.57.95,3.43,3.43,0,0,0,2.56-.95,3.26,3.26,0,0,0,.88-2.41,3,3,0,0,0-.25-1.33,2.77,2.77,0,0,0-.69-1.07,3.16,3.16,0,0,0-1.06-.76A3.28,3.28,0,0,0,364.84,235Z" transform="translate(-229.89 -220.71)" fill="#F1A869" fill-rule="evenodd"/><path d="M387.11,244.45a4.42,4.42,0,0,1-2.06,1.65,6.29,6.29,0,0,1-2.63.51,6.93,6.93,0,0,1-3.07-.64,7.65,7.65,0,0,1-2.44-1.77,7.91,7.91,0,0,1-1.56-2.6,8.69,8.69,0,0,1,1.56-8.81,7.3,7.3,0,0,1,2.38-1.77,7.06,7.06,0,0,1,3.07-.63,7.24,7.24,0,0,1,2.56.5,5.13,5.13,0,0,1,2.13,1.52v-10.9h5.38v24.72h-5.38v-1.78ZM384.05,235a3.43,3.43,0,0,0-1.44.26,3.3,3.3,0,0,0-1.07.76,3.67,3.67,0,0,0-.68,1.07,3.33,3.33,0,0,0-.25,1.33,3.56,3.56,0,0,0,.87,2.41,3.37,3.37,0,0,0,2.57.95,3.43,3.43,0,0,0,2.56-.95,3.26,3.26,0,0,0,.88-2.41,3,3,0,0,0-.25-1.33,2.89,2.89,0,0,0-.69-1.07,3.26,3.26,0,0,0-1.06-.76A3.65,3.65,0,0,0,384.05,235Z" transform="translate(-229.89 -220.71)" fill="#F1A869" fill-rule="evenodd"/><g mask="url(#mask-2)"><path d="M407.82,230.58l-3.94,7.85-4.07-7.85h-6.13l7.26,13.24-5.13,9.7h6l12.08-22.94Z" transform="translate(-229.89 -220.71)" fill="#F1A869" fill-rule="evenodd"/></g><path d="M318.17,221.71h5.38v10.58a5,5,0,0,1,2.12-1.52,7.65,7.65,0,0,1,2.94-.38,8.3,8.3,0,0,1,2.69.5,6.29,6.29,0,0,1,2.63,2,8.58,8.58,0,0,1,1.38,2.6,10.57,10.57,0,0,1,.5,3.17,8.61,8.61,0,0,1-.56,3.1,8.53,8.53,0,0,1-1.57,2.6,7.47,7.47,0,0,1-2.38,1.78,7,7,0,0,1-3.06.63,5.44,5.44,0,0,1-4.94-2.16h-.07v1.46h-5V221.71Zm11,19.13a3.2,3.2,0,0,1-2.57,1,3.47,3.47,0,0,1-2.56-1,3.18,3.18,0,0,1-.82-1.71,2.94,2.94,0,0,1-.12-.7,3.09,3.09,0,0,1,.25-1.33,3.18,3.18,0,0,1,.75-1.14,3.26,3.26,0,0,1,1.06-.76,4,4,0,0,1,3.38.25,3.12,3.12,0,0,1,1.25,1.65,4.73,4.73,0,0,1,.25,1.33A3.22,3.22,0,0,1,329.18,240.84Z" transform="translate(-229.89 -220.71)" fill="#F1A869" fill-rule="evenodd"/><g mask="url(#mask-3)"><path d="M230.89,221.71h5.38v10.9a5.48,5.48,0,0,1,2.06-1.53,7.3,7.3,0,0,1,2.57-.5,7,7,0,0,1,3.06.63,7.33,7.33,0,0,1,2.38,1.78,9,9,0,0,1,1.57,2.59,8.89,8.89,0,0,1,0,6.21,8.53,8.53,0,0,1-1.57,2.6,7.47,7.47,0,0,1-2.38,1.78,7,7,0,0,1-3.06.63,7.09,7.09,0,0,1-2.57-.51,4.59,4.59,0,0,1-2-1.65h-.06v1.84h-5.38Zm8.57,13.43a3.46,3.46,0,0,0-1.44.25,3.3,3.3,0,0,0-1.06.76,3.89,3.89,0,0,0-.69,1.08,3.3,3.3,0,0,0-.25,1.33,3.52,3.52,0,0,0,.88,2.41,3.36,3.36,0,0,0,2.56.95A3.51,3.51,0,0,0,242,241a3.29,3.29,0,0,0,.87-2.41,2.93,2.93,0,0,0-.25-1.33,2.76,2.76,0,0,0-.69-1.08,3.3,3.3,0,0,0-1.06-.76A4.78,4.78,0,0,0,239.46,235.14Zm19.14-4.69a12.19,12.19,0,0,1,3.45.51,9,9,0,0,1,2.87,1.58,7.86,7.86,0,0,1,2,2.54,7.69,7.69,0,0,1,.75,3.48,7.61,7.61,0,0,1-.75,3.42,7.14,7.14,0,0,1-2,2.54,9,9,0,0,1-2.87,1.58,10.38,10.38,0,0,1-3.45.51,12.18,12.18,0,0,1-3.44-.51,9,9,0,0,1-2.87-1.58,7.86,7.86,0,0,1-2-2.54,8.47,8.47,0,0,1,0-7,7.19,7.19,0,0,1,2-2.53,9,9,0,0,1,2.87-1.59A14.84,14.84,0,0,1,258.6,230.45Zm0,4.69a3.38,3.38,0,0,0-1.43.25,3.46,3.46,0,0,0-1.07.76,4.13,4.13,0,0,0-.69,1.08,3.48,3.48,0,0,0-.25,1.33A3.57,3.57,0,0,0,256,241a3.4,3.4,0,0,0,2.56.95,3.5,3.5,0,0,0,2.57-.95,3.26,3.26,0,0,0,.88-2.41,3.07,3.07,0,0,0-.25-1.33,3,3,0,0,0-.69-1.08,3.46,3.46,0,0,0-1.07-.76A5.42,5.42,0,0,0,258.6,235.14Zm15.71-1.84a5.27,5.27,0,0,1,2.13-2,7.14,7.14,0,0,1,2.94-.57h1.06v4.88a3.87,3.87,0,0,0-1.13-.38,6.73,6.73,0,0,0-1.19-.07,5.24,5.24,0,0,0-1.87.32,3.41,3.41,0,0,0-1.19.89,3.07,3.07,0,0,0-.56,1.39,6.94,6.94,0,0,0-.19,1.71V246h-5V230.77h5ZM293,244.58a4.45,4.45,0,0,1-2.07,1.65,6.29,6.29,0,0,1-2.63.51,6.91,6.91,0,0,1-3.06-.64,7.54,7.54,0,0,1-2.44-1.77,7.87,7.87,0,0,1-1.57-2.6,8.89,8.89,0,0,1,0-6.21,8.53,8.53,0,0,1,1.57-2.6,7.37,7.37,0,0,1,2.37-1.77,6.93,6.93,0,0,1,3.07-.64,7.09,7.09,0,0,1,2.57.51,5.08,5.08,0,0,1,2.12,1.52V221.71h5.38v24.71H293Zm-3.2-9.44a3.38,3.38,0,0,0-1.43.25,3.35,3.35,0,0,0-1.07.76,4.13,4.13,0,0,0-.69,1.08,3.48,3.48,0,0,0-.25,1.33,3.57,3.57,0,0,0,.88,2.41,3.94,3.94,0,0,0,5.13,0,3.26,3.26,0,0,0,.88-2.41,3.07,3.07,0,0,0-.25-1.33,3,3,0,0,0-.69-1.08,3.46,3.46,0,0,0-1.07-.76A5.49,5.49,0,0,0,289.82,235.14Zm26.91,4.37H305.34a3.55,3.55,0,0,0,.81,2.54,3.37,3.37,0,0,0,2.51.88,3.75,3.75,0,0,0,1.5-.31,2.18,2.18,0,0,0,1.06-1.27h5.13a5.26,5.26,0,0,1-1.06,2.47,7.55,7.55,0,0,1-1.82,1.65,7.77,7.77,0,0,1-2.25.95,11.27,11.27,0,0,1-2.5.32,12.17,12.17,0,0,1-3.5-.51,7.81,7.81,0,0,1-2.76-1.59,7.44,7.44,0,0,1-1.81-2.53,9.38,9.38,0,0,1-.06-6.91,8.16,8.16,0,0,1,1.68-2.53,8,8,0,0,1,2.63-1.59,9.47,9.47,0,0,1,3.38-.57,9.92,9.92,0,0,1,3.5.57,6.44,6.44,0,0,1,2.57,1.72,8.18,8.18,0,0,1,1.63,2.66,17.94,17.94,0,0,1,.75,3.55Zm-5.13-3.29a3,3,0,0,0-1.38-2,3.48,3.48,0,0,0-3.69.19,3,3,0,0,0-1.13,1.78Zm14.07-5.45a5.51,5.51,0,0,0-2.12,1.52v-1.52h-5.38V246h5v-7.61a3,3,0,0,1,.25-1.33,2.89,2.89,0,0,1,.69-1.07,3.46,3.46,0,0,1,1.13-.76,3.69,3.69,0,0,1,1.5-.26,3.75,3.75,0,0,1,1.5.26l.37.19v-5.07A9.74,9.74,0,0,0,325.67,230.77Z" transform="translate(-229.89 -220.71)" fill="#fff" stroke="#fff" stroke-width="2" fill-rule="evenodd"/></g></g></svg>
+                    <p class="text-lg animate-text btn btn-secondary">Call for a FREE quote: 1-866-926-0464</p>
+                </div>
+               
+            </header>
+
+            <section class="hero  mb-8">
+                <div class="hero_content left">
+                    <h2 class="text-3xl font-semibold animate-title left">IMPORTING <br>AND EXPORTING IS HARD</h2>
+                    <p class="text-lg animate-text left">We do the hard part for you. Grab a free online quote now.</p>
+                </div>
+                
+                <div class="button_content">
+                    <p class="text-sm animate-text left">I want to :</p>
+                    <div class="button-group ">
+                        
+                    <button class="animate-text btn btn-secondary">IMPORT A VEHICLE</button>
+                    <button class="animate-text btn btn-secondary">IMPORT ANY ITEM</button>
+                </div>
+            </section>
+
+            <section class="about mb-8">
+                <div class="content-wrapper">
+                    <div class="text-content">
+                        <h3 class="text-3xl font-semibold animate-title mb-8 ">WHO ARE WE</h3>
+                        <p class="animate-text text-lg">Border Buddy is a customs broker providing online solutions for anyone fed up with being buried in duty and tariff paperwork. We simplify the cross-border retail experience with online solutions for both web-based businesses and shoppers.</p>
+                    </div>
+                  <div class="image-wrapper">
+                        <img class="image-fliter" src="https://paintbynumbers.uk/wp-content/uploads/2020/07/Shiny-car-Adult-paint-by-numbers.jpg" alt="About Us" class="rounded-lg">
+                    </div>
+             
+                    </div>
+                </div>
+            </section>
+
+            <section class="info mb-8">
+                <h3 class="text-3xl font-semibold animate-title mb-8 ">WHY DO I NEED A CUSTOMS BROKER?</h3>
+                <p class="animate-text">Customs brokers help complete the paperwork to move your goods from one country to another. The broker walks you through the paperwork required in customs and answers it all before you get to the border making your trip faster and easier.</p>
+            </section>
+
+            <section class="contact bg-card p-6 rounded-lg ">
+                <div class="form-container border ">
+                <h3 class="text-3xl font-semibold text-center animate-title">DUTY CALLS</h3>
+                <p class="text-center animate-text">When duty calls, talk to your buddy. We're ready with the answers you need to speed up and simplify the customs process.</p>
+                <form id="duty-form" class="mt-4">
+                    <div class="form-group ">
+                        <label for="Name">Name</label>
+                        <input type="text" name="name" placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Email">Email</label>
+                        <input type="email" name="email" placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Phone Number">Phone Number</label>
+                        <input type="tel" name="phone" placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Phone Number">Ask our experts *</label>
+                        <textarea name="message" placeholder="" required></textarea>
+                    </div>
+                    <div class="button-wrapper">
+                        <button type="submit" class="btn btn-secondary subscribe_btn">SUBMIT</button>
+                    </div>
+                </form>
+            </div>
+                 <!-- Success message start -->
+      <div class="card success-message text-center hide ">
+        <div class="image-content mb-4">
+            <img src="https://josh76543210-fm-newsletter-sign-up.netlify.app/assets/images/icon-success.svg" alt="" />
+        </div>
+
+        <h2 class="text-2xl font-bold mb-2">Thanks for your submission!</h2>
+        <p class="mb-2">
+         You will be contacted by  
+          <span class="submitted-email">ash@loremcompany.com</span> within 24 - 48 hours. 
+         
+        </p>
+        <button class="btn dismiss-btn ">Dismiss message</button>
+      </div>
+
+      <!-- Success message end -->
+            </section>
+
+            <footer class="text-center info">
+                <div class="footer-content">
+                <svg class="" style="width: 25px; margin-right: 10px" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.46 25.14"><defs><clipPath id="clip-path" transform="translate(-311.74 -221.06)"><rect x="233.25" y="221" width="183" height="32" fill="none"/></clipPath></defs><g clip-path="url(#clip-path)"><path d="M319.56,221.09h5.38v10.58a5,5,0,0,1,2.12-1.52,7.55,7.55,0,0,1,2.94-.38,8.21,8.21,0,0,1,2.69.5,6.26,6.26,0,0,1,2.63,2,8.56,8.56,0,0,1,1.38,2.6,10.3,10.3,0,0,1,.5,3.17,8.53,8.53,0,0,1-2.13,5.7,7.44,7.44,0,0,1-2.38,1.78,7,7,0,0,1-3.06.63,5.46,5.46,0,0,1-4.94-2.16h-.07v1.46h-5V221.09Zm11,19.13a3.22,3.22,0,0,1-2.57,1,3.5,3.5,0,0,1-2.56-1,3.15,3.15,0,0,1-.82-1.71,2.78,2.78,0,0,1-.12-.7,3,3,0,0,1,.25-1.33,3.23,3.23,0,0,1,.75-1.14,3.33,3.33,0,0,1,1.06-.76,4,4,0,0,1,3.38.25,3.13,3.13,0,0,1,1.25,1.65,4.67,4.67,0,0,1,.25,1.33,3.2,3.2,0,0,1-.86,2.41Zm-18.76.12h-.06" transform="translate(-311.74 -221.06)" fill="#f1a869" fill-rule="evenodd"/><path d="M321.5,230.14" transform="translate(-311.74 -221.06)" fill="#fff"/><path d="M330.82,239.14" transform="translate(-311.74 -221.06)" fill="#fff"/><path d="M332.09,225.55" transform="translate(-311.74 -221.06)" fill="#fff"/><path d="M325,221.06h-5.45v24.55H325Z" transform="translate(-311.74 -221.06)" fill="#fff"/><path d="M327.93,234.3a3.75,3.75,0,0,1,3.32,2.15l.21-6.56a6.76,6.76,0,0,0-5,.55,6,6,0,0,0-1.47,1.2V236a3.71,3.71,0,0,1,2.56-1.72l.36,0" transform="translate(-311.74 -221.06)" fill="#fff"/><path d="M331,239.67a3.7,3.7,0,0,1-2.33,1.5,3.82,3.82,0,0,1-3.8-1.89c-.07,1.65-.15,3.3-.22,4.95a6.87,6.87,0,0,0,6.48,1.77Q331.1,242.83,331,239.67Z" transform="translate(-311.74 -221.06)" fill="#fff"/><rect x="13.28" y="13.69" width="6.87" height="6.87" rx="3.44" fill="#f1a869" stroke="#f1a869"/></g></svg>
+                
+                <p class="text-sm footer-text ">© 2018 BorderBuddy. All rights reserved.</p>
+            </div>
+            </footer>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

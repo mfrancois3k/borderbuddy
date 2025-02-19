@@ -1,0 +1,10 @@
+server.borderbuddy.site {
+    root * /var/www/borderbuddy.site 
+   
+    file_server
+    encode gzip
+    
+    log {
+        output file /var/log/caddy/borderbuddy.log
+    }
+}
